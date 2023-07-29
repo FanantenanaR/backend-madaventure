@@ -8,46 +8,46 @@ Todo Initisalisation:
     ✔ configuration base de données @started(23-07-29 11:30) @done(23-07-29 11:42) @lasted(12m42s)
       ✔ Database connector @done(23-07-29 11:30)
       ✔ Initialisation connection DB @started(23-07-29 11:41) @done(23-07-29 11:42) @lasted(1m39s)
-  ☐ Conception @started(23-07-29 14:43)
-    ☐ Base de donnée MongoDB @started(23-07-29 14:43)
+  ✔ Conception @started(23-07-29 14:43) @done(23-07-30 01:25) @lasted(10h42m10s)
+    ✔ Base de donnée MongoDB @started(23-07-29 14:43) @done(23-07-30 01:25) @lasted(10h42m12s)
       ✔ Création des fichiers @started(23-07-29 14:48) @done(23-07-29 15:28) @lasted(40m12s)
-      ☐ Création template de requete pour chaque scénario @started(23-07-29 15:29)
-        ☐ Recherche simple
+      ✔ Création template de requete pour chaque scénario @started(23-07-29 15:29) @done(23-07-30 01:25) @lasted(9h56m14s)
+        ✔ Recherche simple @done(23-07-30 01:25)
         ✔ Utilisation authentification utilisateur @started(23-07-29 15:29) @done(23-07-29 16:12) @lasted(43m12s)
           ✔ login @done(23-07-29 16:12)
           ✔ inscription @done(23-07-29 16:12)
           ✔ check user exist (username ou email) @done(23-07-29 16:12)
-        ☐ Lieu (Province)
-          ☐ Obtenir liste des lieux
-          ☐ Rechercher un lieu
-        ☐ list categorie avec nombre d'article sous cette categorie
-        ☐ details d'un categorie
-        ☐ details d'un article
-        ☐ article dans un categorie
-        ☐ list de 
+        ✔ Lieu (Province) @done(23-07-30 01:25)
+          ✔ Obtenir liste des lieux @done(23-07-30 01:25)
+          ✔ Rechercher un lieu @done(23-07-30 01:25)
+        ✔ list categorie avec nombre d'article sous cette categorie @done(23-07-30 01:25)
+        ✔ details d'un categorie @done(23-07-30 01:25)
+        ✔ details d'un article @done(23-07-30 01:25)
+        ✔ article dans un categorie @done(23-07-30 01:25)
+        ✔ list de @done(23-07-30 01:25)
     ☐ Recolte de donnée
       ☐ Lieux (Province et lieu visitable dedans) sur son histoire, des photos et icon
       ☐ utilisateur admin
       ☐ utilisateur normal
   ☐ Préparation Firebase
     ☐ upload fichier 
-  ☐ Preparation endpoint
-    ☐ mise en place convention de format de retour par le webservice
-    ☐ preparation des controlleurs
-      ☐ api authentification
-        ☐ Login
-        ☐ Inscription
-        ☐ Check existant compte
-      ☐ api utilisateur admin
-        ☐ CRUD article
-        ☐ CRUD categorie
-      ☐ api utilisateur 
-        ☐ GET list articles avec recherche et pagination et tri
-        ☐ Get list lieu
-        ☐ Get list categorie
-        ☐ Get details d'un categorie 
-        ☐ Get list article dans une categorie
-        ☐ Get details d'un article
+  ✔ Preparation endpoint @done(23-07-30 01:25)
+    ✔ mise en place convention de format de retour par le webservice @done(23-07-30 01:25)
+    ✔ preparation des controlleurs @done(23-07-30 01:25)
+      ✔ api authentification @done(23-07-30 01:25)
+        ✔ Login @done(23-07-30 01:25)
+        ✔ Inscription @done(23-07-30 01:25)
+        ✔ Check existant compte @done(23-07-30 01:25)
+      ✔ api utilisateur admin @done(23-07-30 01:25)
+        ✔ CRUD article @done(23-07-30 01:25)
+        ✔ CRUD categorie @done(23-07-30 01:25)
+      ✔ api utilisateur @done(23-07-30 01:25)
+        ✔ GET list articles avec recherche et pagination et tri @done(23-07-30 01:25)
+        ✔ Get list lieu @done(23-07-30 01:25)
+        ✔ Get list categorie @done(23-07-30 01:25)
+        ✔ Get details d'un categorie @done(23-07-30 01:25)
+        ✔ Get list article dans une categorie @done(23-07-30 01:25)
+        ✔ Get details d'un article @done(23-07-30 01:25)
   ☐ securité
     ☐ Middleware 
       ☐ API Utilisateur admin
