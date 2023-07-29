@@ -1,0 +1,1070 @@
+{
+	"info": {
+		"_postman_id": "e1f23c22-e76d-4e58-b1c9-e98cfee90497",
+		"name": "Examen - Mr Rojo - Mobile Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Authentification",
+					"item": [
+						{
+							"name": "Test authentification",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/user/",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "fanantenanaran@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "abcadmin",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/user/login",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "inscription",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nom",
+											"value": "Randriamahefa",
+											"type": "default"
+										},
+										{
+											"key": "prenom",
+											"value": "Fanantenana",
+											"type": "default"
+										},
+										{
+											"key": "datenaissance",
+											"value": "09/01/2002",
+											"type": "default"
+										},
+										{
+											"key": "username",
+											"value": "FanantenanaR",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "fanantenanaran@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "abcadmin",
+											"type": "default"
+										},
+										{
+											"key": "profilepicture",
+											"value": "",
+											"type": "default"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/user/inscription",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"inscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "check username",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/user/check-username/fanantenanar",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"check-username",
+										"fanantenanar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "check email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/user/check-email/fanantenanaran5@gmail.com",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"check-email",
+										"fanantenanaran5@gmail.com"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Province",
+					"item": [
+						{
+							"name": "get list province",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/province/?word=a",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"province",
+										""
+									],
+									"query": [
+										{
+											"key": "word",
+											"value": "a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get details province",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/province/:id",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"province",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "64c56a4a8ad9d780ccb1491d"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modifier contenue province",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "imagecouverture",
+											"value": " ",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/province/:id",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"province",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "64c56a4a8ad9d780ccb1491d"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Activite",
+					"item": [
+						{
+							"name": "get list Activite",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/activite/?word=r",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"activite",
+										""
+									],
+									"query": [
+										{
+											"key": "word",
+											"value": "r"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "insertion activite",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nom",
+											"value": "Randonné",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "La randonnée pédestre est un loisir de marche à pied qui s'effectue dans la nature en suivant un itinéraire, balisé ou non, seul ou en groupe.",
+											"type": "default"
+										},
+										{
+											"key": "imagecouverture",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "icon",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "couleurbackground",
+											"value": "",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/activite/",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"activite",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modification activite",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nom",
+											"value": "Randonnée pédestre",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "imagecouverture",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "icon",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "couleurbackground",
+											"value": "",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/activite/:activiteId",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"activite",
+										":activiteId"
+									],
+									"variable": [
+										{
+											"key": "activiteId",
+											"value": "64c577e0a7e4340a455665da"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete activite",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/activite/:activiteId",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"activite",
+										":activiteId"
+									],
+									"variable": [
+										{
+											"key": "activiteId",
+											"value": "64c577e0a7e4340a455665da"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get corbeille",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/activite/corbeille",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"activite",
+										"corbeille"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "restaurer from corbeille",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/activite/corbeille/:activiteId",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"activite",
+										"corbeille",
+										":activiteId"
+									],
+									"variable": [
+										{
+											"key": "activiteId",
+											"value": "64c577e0a7e4340a455665da"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get activite dans un province",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/activite/province/:provinceId",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"activite",
+										"province",
+										":provinceId"
+									],
+									"variable": [
+										{
+											"key": "provinceId",
+											"value": "64c56a4a8ad9d780ccb1491d"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get details activite",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{LOCAL_BASE_URL}}/api/v1/activite/get/:activiteId",
+									"host": [
+										"{{LOCAL_BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"activite",
+										"get",
+										":activiteId"
+									],
+									"variable": [
+										{
+											"key": "activiteId",
+											"value": "64c577e0a7e4340a455665da"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Lieu",
+					"item": [
+						{
+							"name": "CRUD",
+							"item": [
+								{
+									"name": "activite attribut",
+									"item": [
+										{
+											"name": "add activite to lieu",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "activiteId",
+															"value": "64c577e0a7e4340a455665da",
+															"type": "default"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/add/activite/:lieuId",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"add",
+														"activite",
+														":lieuId"
+													],
+													"variable": [
+														{
+															"key": "lieuId",
+															"value": "64c588619ad0e42530ac0410"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "remove activite to lieu",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "activiteId",
+															"value": "64c577e0a7e4340a455665da",
+															"type": "default"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/del/activite/:lieuId",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"del",
+														"activite",
+														":lieuId"
+													],
+													"variable": [
+														{
+															"key": "lieuId",
+															"value": "64c588619ad0e42530ac0410"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "image attribut",
+									"item": [
+										{
+											"name": "add image lieu",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "activiteId",
+															"value": "64c577e0a7e4340a455665da",
+															"type": "default"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/add/image/:lieuId",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"add",
+														"image",
+														":lieuId"
+													],
+													"variable": [
+														{
+															"key": "lieuId",
+															"value": "64c588619ad0e42530ac0410"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "remove image lieu",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "activiteId",
+															"value": "64c577e0a7e4340a455665da",
+															"type": "default"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/del/image/:lieuId",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"del",
+														"image",
+														":lieuId"
+													],
+													"variable": [
+														{
+															"key": "lieuId",
+															"value": "64c588619ad0e42530ac0410"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "total crud",
+									"item": [
+										{
+											"name": "get list lieu",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "insertion lieu",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "nom",
+															"value": "416 Coups",
+															"type": "default"
+														},
+														{
+															"key": "description",
+															"value": "Mandendeha amin'ny tohatry ny 416.",
+															"type": "default"
+														},
+														{
+															"key": "corpstextuel",
+															"value": "",
+															"type": "default"
+														},
+														{
+															"key": "imagecouverture",
+															"value": "",
+															"type": "default"
+														},
+														{
+															"key": "idutilisateur",
+															"value": "64c54eb1d5b17cd0b0ee0218",
+															"type": "default"
+														},
+														{
+															"key": "idprovince",
+															"value": "64c56a4a8ad9d780ccb1491d",
+															"type": "default"
+														},
+														{
+															"key": "idactivites",
+															"value": "64c577e0a7e4340a455665da",
+															"type": "default"
+														},
+														{
+															"key": "images",
+															"value": "a",
+															"type": "default"
+														},
+														{
+															"key": "images",
+															"value": "b",
+															"type": "default"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get details lieu",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/t/:lieuId",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"t",
+														":lieuId"
+													],
+													"variable": [
+														{
+															"key": "lieuId",
+															"value": "64c588619ad0e42530ac0410"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "modify lieu",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "nouveauNom",
+															"value": "416 totohatra",
+															"type": "default"
+														},
+														{
+															"key": "nouvelleDescription",
+															"value": "",
+															"type": "default"
+														},
+														{
+															"key": "nouvelleCorpsTextuel",
+															"value": "",
+															"type": "default"
+														},
+														{
+															"key": "nouvelleImageCouverture",
+															"value": "",
+															"type": "default"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/t/:id",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"t",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "64c588619ad0e42530ac0410"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "delete lieu",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/t/:lieuId",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"t",
+														":lieuId"
+													],
+													"variable": [
+														{
+															"key": "lieuId",
+															"value": "64c588619ad0e42530ac0410"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "corbeille lieu",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/get/corbeille",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"get",
+														"corbeille"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "restaurer lieu",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/restaurer/:lieuId",
+													"host": [
+														"{{LOCAL_BASE_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"lieu",
+														"restaurer",
+														":lieuId"
+													],
+													"variable": [
+														{
+															"key": "lieuId",
+															"value": "64c588619ad0e42530ac0410"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Find",
+							"item": [
+								{
+									"name": "find lieu dans une province",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/province/:provinceId",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"lieu",
+												"province",
+												":provinceId"
+											],
+											"variable": [
+												{
+													"key": "provinceId",
+													"value": "64c56a4a8ad9d780ccb1491d"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "find lieu pour une activité",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/activite/:activiteId",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"lieu",
+												"activite",
+												":activiteId"
+											],
+											"variable": [
+												{
+													"key": "activiteId",
+													"value": "64c577e0a7e4340a455665da"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "find lieu publié par un utilisateur",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{LOCAL_BASE_URL}}/api/v1/lieu/utilisateur/:utilisateurId",
+											"host": [
+												"{{LOCAL_BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"lieu",
+												"utilisateur",
+												":utilisateurId"
+											],
+											"variable": [
+												{
+													"key": "utilisateurId",
+													"value": "64c54eb1d5b17cd0b0ee0218"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LOCAL_BASE_URL",
+			"value": "http://localhost:8002",
+			"type": "default"
+		}
+	]
+}
