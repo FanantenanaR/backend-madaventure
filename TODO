@@ -1,0 +1,54 @@
+
+Todo Initisalisation: 
+  ✔ Ecriture TODO Initisalisation @started(23-07-29 11:20) @done(23-07-29 14:05) @lasted(2h45m50s)
+  ✔ Mise en place fichier de configutation @done(23-07-29 14:25)
+    ✔ Création fichier de configuration .env @done(23-07-29 11:28)
+      ✔ config local @done(23-07-29 11:29)
+      ✔ config en production @done(23-07-29 11:29) 
+    ✔ configuration base de données @started(23-07-29 11:30) @done(23-07-29 11:42) @lasted(12m42s)
+      ✔ Database connector @done(23-07-29 11:30)
+      ✔ Initialisation connection DB @started(23-07-29 11:41) @done(23-07-29 11:42) @lasted(1m39s)
+  ☐ Conception @started(23-07-29 14:43)
+    ☐ Base de donnée MongoDB @started(23-07-29 14:43)
+      ✔ Création des fichiers @started(23-07-29 14:48) @done(23-07-29 15:28) @lasted(40m12s)
+      ☐ Création template de requete pour chaque scénario @started(23-07-29 15:29)
+        ☐ Recherche simple
+        ✔ Utilisation authentification utilisateur @started(23-07-29 15:29) @done(23-07-29 16:12) @lasted(43m12s)
+          ✔ login @done(23-07-29 16:12)
+          ✔ inscription @done(23-07-29 16:12)
+          ✔ check user exist (username ou email) @done(23-07-29 16:12)
+        ☐ Lieu (Province)
+          ☐ Obtenir liste des lieux
+          ☐ Rechercher un lieu
+        ☐ list categorie avec nombre d'article sous cette categorie
+        ☐ details d'un categorie
+        ☐ details d'un article
+        ☐ article dans un categorie
+        ☐ list de 
+    ☐ Recolte de donnée
+      ☐ Lieux (Province et lieu visitable dedans) sur son histoire, des photos et icon
+      ☐ utilisateur admin
+      ☐ utilisateur normal
+  ☐ Préparation Firebase
+    ☐ upload fichier 
+  ☐ Preparation endpoint
+    ☐ mise en place convention de format de retour par le webservice
+    ☐ preparation des controlleurs
+      ☐ api authentification
+        ☐ Login
+        ☐ Inscription
+        ☐ Check existant compte
+      ☐ api utilisateur admin
+        ☐ CRUD article
+        ☐ CRUD categorie
+      ☐ api utilisateur 
+        ☐ GET list articles avec recherche et pagination et tri
+        ☐ Get list lieu
+        ☐ Get list categorie
+        ☐ Get details d'un categorie 
+        ☐ Get list article dans une categorie
+        ☐ Get details d'un article
+  ☐ securité
+    ☐ Middleware 
+      ☐ API Utilisateur admin
+      ☐ API Utilisateur simple
