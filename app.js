@@ -15,10 +15,10 @@ var app = express();
 // setup environment variables
 const dotenv = require('dotenv');
 
-if (process.env.NODE_ENV === 'production') {
-  dotenv.config({ path: '.env.prod' });
-} else {
+if (process.env.NODE_ENV === 'local') {
   dotenv.config({ path: '.env.local' });
+} else {
+  dotenv.config();
 }
 
 // setup database connection
