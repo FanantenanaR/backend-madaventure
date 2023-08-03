@@ -15,11 +15,12 @@ var app = express();
 // setup environment variables
 const dotenv = require('dotenv');
 
-if (process.env.NODE_ENV === 'local') {
-  dotenv.config({ path: '.env.local' });
-} else {
-  dotenv.config();
-}
+// dotenv.config({ path: '.env.local' });
+// if (process.env.NODE_ENV === 'local') {
+//   dotenv.config({ path: '.env.local' });
+// } else {
+// }
+dotenv.config();
 
 // setup database connection
 const connectDB = require('./configuration/database-connector');
