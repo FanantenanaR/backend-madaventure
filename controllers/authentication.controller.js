@@ -13,7 +13,7 @@ const login = (request, response) => {
                 response.status(200).json({
                     success: true,
                     message: "Authentification réussie",
-                    utilisateur,
+                    data: utilisateur,
                 });
             } else {
                 // L'utilisateur n'a pas pu être authentifié
@@ -161,6 +161,7 @@ const checkUsername = (request, response) => {
                 response.status(200).json({
                     success: true,
                     message: "Le nom d'utilisateur est disponible",
+                    data: null
                 });
             }
         })
@@ -193,6 +194,7 @@ const checkEmail = (request, response) => {
                 response.status(200).json({
                     success: true,
                     message: "L'adresse e-mail est disponible",
+                    data: null
                 });
             }
         })

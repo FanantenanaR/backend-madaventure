@@ -16,7 +16,7 @@ const getProvinces = async (request, response) => {
     try {
         const { word } = request.query;
         const provinces = await provinceService.getProvinces(word ? word : '');
-        sendResponse(response, 200, true, {provinces}, "Liste des provinces obtenue avec succès.");
+        sendResponse(response, 200, true, { data: provinces}, "Liste des provinces obtenue avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la récupération des provinces :", err);
         sendResponse(response, 500, false, null, "Une erreur s'est produite lors de la récupération des provinces.");
@@ -31,7 +31,7 @@ const getProvinceById = async (request, response) => {
         if (!province) {
             return sendResponse(response, 404, false, null, "Province non trouvée.");
         }
-        sendResponse(response, 200, true, {province}, "Détails de la province obtenus avec succès.");
+        sendResponse(response, 200, true, { data: province}, "Détails de la province obtenus avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la récupération de la province par ID :", err);
         sendResponse(response, 500, false, null, "Une erreur s'est produite lors de la récupération de la province.");
@@ -49,7 +49,7 @@ const modifyContenuProvince = async (request, response) => {
         if (!updatedProvince) {
             return sendResponse(response, 404, false, null, "Province non trouvée.");
         }
-        sendResponse(response, 200, true, updatedProvince, "Contenu de la province modifié avec succès.");
+        sendResponse(response, 200, true, { data: updatedProvince}, "Contenu de la province modifié avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la modification du contenu de la province :", err);
         sendResponse(response, 500, false, null, "Une erreur s'est produite lors de la modification de la province.");
