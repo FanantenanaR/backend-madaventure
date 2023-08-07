@@ -6,7 +6,7 @@ const LieuService = require('../services/lieu.service');
 const sendResponse = (response, status, success, data, message) => {
     response.status(status).json({
         success,
-        data,
+        data: data,
         message,
     });
 };
@@ -33,7 +33,7 @@ const insererLieu = async (req, res) => {
             images || []
         );
 
-        return sendResponse(res, 201, true, { data: lieu }, 'Le lieu a été créé avec succès.');
+        return sendResponse(res, 201, true, lieu, 'Le lieu a été créé avec succès.');
     } catch (err) {
         return sendResponse(res, 500, false, null, 'Une erreur s\'est produite lors de la création du lieu.');
     }
@@ -45,7 +45,7 @@ const rechercherLieux = async (req, res) => {
 
     try {
         const lieux = await LieuService.getLieu(nomLieu || '');
-        return sendResponse(res, 200, true, { data: lieux }, 'Liste des lieux trouvés.');
+        return sendResponse(res, 200, true, lieux, 'Liste des lieux trouvés.');
     } catch (err) {
         return sendResponse(res, 500, false, null, 'Une erreur s\'est produite lors de la recherche des lieux.');
     }
@@ -61,7 +61,7 @@ const getOneLieu = async (req, res) => {
             return sendResponse(res, 404, false, null, 'Le lieu spécifié n\'a pas été trouvé.');
         }
 
-        return sendResponse(res, 200, true, { data: lieu }, 'Lieu trouvé.');
+        return sendResponse(res, 200, true, lieu, 'Lieu trouvé.');
     } catch (err) {
         return sendResponse(res, 500, false, null, 'Une erreur s\'est produite lors de la recherche du lieu.');
     }
@@ -94,7 +94,7 @@ const modifierLieu = async (req, res) => {
 
         return res.status(200).json({
             success: true,
-            data: {  updatedLieu },
+            data: updatedLieu ,
             message: 'Le lieu a été modifié avec succès.',
         });
     } catch (err) {
@@ -115,7 +115,7 @@ const supprimerLieu = async (req, res) => {
             return sendResponse(res, 404, false, null, 'Le lieu spécifié n\'a pas été trouvé ou ne peut pas être supprimé.');
         }
 
-        return sendResponse(res, 200, true, { data: lieu }, 'Le lieu a été supprimé avec succès.');
+        return sendResponse(res, 200, true, lieu , 'Le lieu a été supprimé avec succès.');
     } catch (err) {
         return sendResponse(res, 500, false, null, 'Une erreur s\'est produite lors de la suppression du lieu.');
     }
@@ -125,7 +125,7 @@ const supprimerLieu = async (req, res) => {
 const getCorbeilleLieu = async (req, res) => {
     try {
         const lieuxSupprimes = await LieuService.getCorbeilleLieu();
-        return sendResponse(res, 200, true, { data: lieuxSupprimes }, "Liste des lieux dans la corbeille récupérée avec succès.");
+        return sendResponse(res, 200, true, lieuxSupprimes, "Liste des lieux dans la corbeille récupérée avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la recherche des lieux dans la corbeille :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de la recherche des lieux dans la corbeille.");
@@ -141,7 +141,7 @@ const restaurerLieu = async (req, res) => {
         if (!lieuRestaure) {
             return sendResponse(res, 404, false, null, "Le lieu spécifié n'a pas été trouvé ou ne peut pas être restauré.");
         }
-        return sendResponse(res, 200, true, { data: lieuRestaure }, "Le lieu a été restauré avec succès.");
+        return sendResponse(res, 200, true, lieuRestaure , "Le lieu a été restauré avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la restauration du lieu :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de la restauration du lieu.");
@@ -158,7 +158,7 @@ const insererActivite = async (req, res) => {
         if (!lieuAvecActivite) {
             return sendResponse(res, 404, false, null, "Le lieu spécifié n'a pas été trouvé ou l'activité existe déjà dans le lieu.");
         }
-        return sendResponse(res, 200, true, { data: lieuAvecActivite }, "L'activité a été ajoutée au lieu avec succès.");
+        return sendResponse(res, 200, true, lieuAvecActivite , "L'activité a été ajoutée au lieu avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de l'insertion de l'activité dans le lieu :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de l'insertion de l'activité dans le lieu.");
@@ -175,7 +175,7 @@ const removeActivite = async (req, res) => {
         if (!lieuSansActivite) {
             return sendResponse(res, 404, false, null, "Le lieu spécifié n'a pas été trouvé ou l'activité n'existe pas dans le lieu.");
         }
-        return sendResponse(res, 200, true, { data: lieuSansActivite }, "L'activité a été supprimée du lieu avec succès.");
+        return sendResponse(res, 200, true, lieuSansActivite , "L'activité a été supprimée du lieu avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la suppression de l'activité du lieu :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de la suppression de l'activité du lieu.");
@@ -192,7 +192,7 @@ const insererImage = async (req, res) => {
         if (!lieuAvecImage) {
             return sendResponse(res, 404, false, null, "Le lieu spécifié n'a pas été trouvé ou l'image existe déjà dans le lieu.");
         }
-        return sendResponse(res, 200, true, { data: lieuAvecImage }, "L'image a été ajoutée au lieu avec succès.");
+        return sendResponse(res, 200, true, lieuAvecImage , "L'image a été ajoutée au lieu avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de l'insertion de l'image dans le lieu :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de l'insertion de l'image dans le lieu.");
@@ -209,7 +209,7 @@ const removeImage = async (req, res) => {
         if (!lieuSansImage) {
             return sendResponse(res, 404, false, null, "Le lieu spécifié n'a pas été trouvé ou l'image n'existe pas dans le lieu.");
         }
-        return sendResponse(res, 200, true, { data: lieuSansImage }, "L'image a été supprimée du lieu avec succès.");
+        return sendResponse(res, 200, true, lieuSansImage , "L'image a été supprimée du lieu avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la suppression de l'image du lieu :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de la suppression de l'image du lieu.");
@@ -222,7 +222,7 @@ const getLieuProvince = async (req, res) => {
 
     try {
         const lieuxProvince = await LieuService.getLieuProvince(provinceId);
-        return sendResponse(res, 200, true, { data: lieuxProvince }, "Liste des lieux dans la province récupérée avec succès.");
+        return sendResponse(res, 200, true, lieuxProvince , "Liste des lieux dans la province récupérée avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la recherche des lieux dans la province :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de la recherche des lieux dans la province.");
@@ -235,7 +235,7 @@ const getLieuActivite = async (req, res) => {
 
     try {
         const lieuxActivite = await LieuService.getLieuActivite(activiteId);
-        return sendResponse(res, 200, true, { data: lieuxActivite }, "Liste des lieux avec l'activité spécifiée récupérée avec succès.");
+        return sendResponse(res, 200, true, lieuxActivite , "Liste des lieux avec l'activité spécifiée récupérée avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la recherche des lieux avec l'activité spécifiée :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de la recherche des lieux avec l'activité spécifiée.");
@@ -248,7 +248,7 @@ const getLieuUtilisateur = async (req, res) => {
 
     try {
         const lieuxUtilisateur = await LieuService.getLieuUtilisateur(utilisateurId);
-        return sendResponse(res, 200, true, { data: lieuxUtilisateur }, "Liste des lieux publiés par l'utilisateur récupérée avec succès.");
+        return sendResponse(res, 200, true, lieuxUtilisateur , "Liste des lieux publiés par l'utilisateur récupérée avec succès.");
     } catch (err) {
         console.error("Une erreur s'est produite lors de la recherche des lieux publiés par l'utilisateur :", err);
         return sendResponse(res, 500, false, null, "Une erreur s'est produite lors de la recherche des lieux publiés par l'utilisateur.");
